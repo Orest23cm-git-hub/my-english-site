@@ -1,0 +1,17 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check netlify/functions/api.js && node --check scripts/prepare-netlify.mjs && node --check index.js && node --check english-others.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:netlify": "node scripts/prepare-netlify.mjs"
+  },
+  "private": true,
+  "dependencies": {
+    "@netlify/blobs": "latest"
+  }
+}
